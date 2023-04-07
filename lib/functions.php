@@ -29,7 +29,7 @@ function input($type, $name, $id, $class, $opt = null)
 }
 
 // Create HTML Textareas Inputs
-function textarea($name, $id, $class, $opt = null)
+function textarea($name, $id, $class, $opt = null, $text = null)
 {
   $attr = [
     'name'  => $name,
@@ -43,7 +43,7 @@ function textarea($name, $id, $class, $opt = null)
     $a = array_merge($attr, $opt);
   };
 
-  $field = Html::tag('textarea', null, $a);
+  $field = Html::tag('textarea', [$text], $a);
   return $field;
 }
 
